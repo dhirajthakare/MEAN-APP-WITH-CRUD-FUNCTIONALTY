@@ -1,0 +1,56 @@
+
+  <div class="pt-3 row">
+    <form #FormData='ngForm' (ngSubmit)="onSubmit(FormData)" class="pt-3 col s12">
+      <div class="row">
+        <div class="input-field col s12">
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="projectsevice.selectmodel._id">
+            <input  #Name='ngModel' name="Name" [(ngModel)]="projectsevice.selectmodel.Name" id="Name" type="text" >
+          <label for="Name">Name</label>
+        </div>
+    </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input  #Email='ngModel'  [(ngModel)]="projectsevice.selectmodel.Email" name="Email" id="Email" type="email" >
+          <label for="Email">Email</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input #Mob='ngModel'  [(ngModel)]="projectsevice.selectmodel.Mob" name="Mob"  id="Mob" type="text" >
+          <label for="Mob">Mobile</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+            <div>
+                <label>
+                  <input class="with-gap" #Gender='ngModel'  [(ngModel)]="projectsevice.selectmodel.Gender"  name="Gender" type="radio" value="Male"  />
+                  <span>Male</span>
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input class="with-gap"  #Gender='ngModel'  [(ngModel)]="projectsevice.selectmodel.Gender" name="Gender" type="radio" value="Female"  />
+                  <span>Female</span>
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input class="with-gap"  #Gender='ngModel'  [(ngModel)]="projectsevice.selectmodel.Gender" name="Gender" type="radio" value="Other" />
+                  <span>Other</span>
+                </label>
+              </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <button  [style.display]="displaySubmit" type="submit"  class="col-3 btn btn-custom   btn-danger ">Submit</button>
+        <button [style.display]="displayUpdate" (click)="Update(FormData)" type="button"  class="col-3 btn-primary btn-primary">Update</button>
+        <button type="button" class="col-3 offset-1 btn-warning btn-warning" (click)="resetForm(FormData)" >Reset</button>
+      </div>
+      
+    </form>
+  </div>

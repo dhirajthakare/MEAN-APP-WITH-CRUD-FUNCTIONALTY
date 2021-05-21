@@ -1,0 +1,28 @@
+<div>
+    
+    <table class=" table-hover">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Gender</th>
+              <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let list of projectService.storeData ">
+            <td>{{list.Name}}</td>
+            <td>{{list.Email}}</td>
+            <td>{{list.Mob}}</td>
+            <td>{{list.Gender}}</td>
+            <td>
+            <a (click)="Edit(list)" class="mr-3"><i class="fa fa-pencil-square"></i></a>
+            <a (click)="Delete(list._id)"><i class="fa fa-trash"></i></a>
+        </td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
