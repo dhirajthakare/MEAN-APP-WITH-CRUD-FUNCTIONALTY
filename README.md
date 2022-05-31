@@ -12,7 +12,7 @@ output will be look like
 
 
 
-## deployment of angular file 
+## deployment of angular Project on server . 
 
 if you want to deploy angular file then you have to add .htaccess file on server and write follwong code inside file 
 
